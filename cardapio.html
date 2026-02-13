@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pyedro Lanches | Cardápio</title>
+    <meta name="description" content="Cardápio do Pyedro Lanches com carrinho e finalização no WhatsApp." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="cardapio">
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Navegação principal">
+        <a class="brand" href="index.html" aria-label="Página inicial">
+          <img class="brand-logo" src="images/logo.png" alt="Pyedro Lanches">
+
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+          ☰
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a class="active" href="cardapio.html">Cardápio</a></li>
+          <li><a href="index.html#contato-rapido">Contato</a></li>
+          <li>
+            <a
+              class="nav-cta"
+              href="https://wa.me/5527981194230?text=Oi!%20Vim%20pelo%20site%20do%20Pyedro%20Lanches%20e%20quero%20fazer%20um%20pedido."
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pedir no WhatsApp</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <section class="menu-hero">
+          <div>
+            <h1>Cardápio</h1>
+            <p class="subtitle">Escolha seus itens, monte seu carrinho e finalize no WhatsApp.</p>
+            <p class="menu-warning">Taxa e região sob consulta.</p>
+          </div>
+          <div class="menu-hero-chip" aria-hidden="true">Sabor premium • preparo rápido</div>
+        </section>
+
+        <button
+          id="cart-toggle"
+          class="cart-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="cart-panel"
+          aria-label="Abrir carrinho"
+        >
+          🛒 Carrinho
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+
+        <section class="menu-controls" aria-label="Filtros do cardápio">
+          <div class="filters" id="filters"></div>
+          <label class="search-group" for="search-input">
+            Buscar item
+            <input id="search-input" type="search" placeholder="Ex: X-Bacon" />
+          </label>
+        </section>
+
+        <div class="menu-layout">
+          <section>
+            <h2 class="sr-only">Itens do cardápio</h2>
+            <div id="menu-grid" class="menu-grid"></div>
+          </section>
+
+          <aside class="cart" id="cart-panel" aria-label="Carrinho de compras">
+            <div class="cart-header"><h2>Seu pedido</h2><button type="button" id="cart-close" class="cart-close" aria-label="Fechar carrinho">✕</button></div>
+            <label for="customer-name">Nome (opcional)</label>
+            <input id="customer-name" type="text" placeholder="Seu nome" />
+            <ul id="cart-items" class="cart-items"></ul>
+            <p class="cart-total">Total: <strong id="cart-total">R$ 0,00</strong></p>
+            <button id="checkout-btn" class="btn btn-primary" type="button">Finalizar pedido</button>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5527981194230"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Abrir conversa no WhatsApp"
+      >WhatsApp</a
+    >
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>Pyedro Lanches • Vila Velha – ES</p>
+        <p>Rua Montevideu 640, Araçás, Vila Velha</p>
+        <p>Seg a Sáb 18:00–23:30 | Dom 18:00–21:00</p>
+        <p>
+          Instagram:
+          <a href="https://instagram.com/Pyedropereira" target="_blank" rel="noopener noreferrer">@Pyedropereira</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
